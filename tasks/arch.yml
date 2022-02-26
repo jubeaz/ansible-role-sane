@@ -4,5 +4,7 @@
     name: "{{ item }}"
     state: present
     update_cache: true
+  register: __pacman
+  changed_when: __pacman.packages is defined
   loop: "{{ sane_pkgs }}"
   notify: restart ipp-usb
