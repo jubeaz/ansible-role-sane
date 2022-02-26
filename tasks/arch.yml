@@ -5,4 +5,4 @@
     state: present
     update_cache: true
   loop: "{{ sane_pkgs }}"
-  notify: restart ipp-pub
+  notify: restart ipp-usb
